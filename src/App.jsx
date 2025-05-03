@@ -1,16 +1,14 @@
 import React from 'react';
-import Navbar from './Component/Navbar';
-import { ThemeProvider } from './Component/ThemeContext';
-import Kalkulator from './Component/Kalkulator';
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Page from './Component/Page';
 
 function App() {
   return (
-    <ThemeProvider>
-      <Navbar  />
-      <Kalkulator />
-    </ThemeProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Page />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
